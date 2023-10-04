@@ -3,7 +3,7 @@ import { createClient } from '@libsql/client';
 import { migrate } from 'drizzle-orm/libsql/migrator';
 import 'dotenv/config';
 
-async function runMigrations() {
+export async function runMigrations() {
 	const db = drizzle(
 		createClient({
 			url: process.env.TURSO_DB_URL || '',
